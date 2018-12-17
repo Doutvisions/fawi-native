@@ -9,7 +9,7 @@
 	<script src="device.js"></script>
 	<script>
 		var divDomElementInfo = document.getElementById("deviceInfo");
-		var DeviceInfo = new Device().getInfo.then((info) => {
+		var DeviceInfo = new Device().info.then((info) => {
 			console.log(info);
 		    divDomElementInfo.innerHTML = JSON.stringify(info);
 		}).catch( (reson) => {
