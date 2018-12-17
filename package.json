@@ -1,0 +1,27 @@
+{
+  "name": "fawi-native",
+  "version": "1.0.0",
+  "description": "FAWI native provide support for native resources, that make adding any native functionality you need to your android app easy.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Doutvisions/fawi-native.git"
+  },
+  "keywords": [
+    "fawi-native",
+    "fawinative",
+    "fawiNative",
+    "fawi_native",
+    "native-fawi",
+    "fawi"
+  ],
+  "author": "engailtonoliveira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Doutvisions/fawi-native/issues"
+  },
+  "homepage": "https://github.com/Doutvisions/fawi-native#readme"
+}
