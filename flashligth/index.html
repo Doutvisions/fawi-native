@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flashligth</title>
+</head>
+<body>
+	<button id="statusFlashligth">cheque status</button>
+	<button id="toogleFlashligth">flash</button>
+	<div id="contextAvailable">
+	</div>
+	<br>
+	<div id="context">
+	</div>
+	<script src="flashligth.js"></script>
+	<script>
+		var btnStatus = document.getElementById("statusFlashligth");
+		var btnToogleFlashligth = document.getElementById("toogleFlashligth");
+		var contextAvailable = document.getElementById("contextAvailable");
+		var context = document.getElementById("context");
+
+		var flashligth = new Flashligth()
+		flashligth.isAvailable.then( (available) => {
+			var msg = available == true ? "Available" : "No available"; 
+			contextAvailable.innerHTML = msg;
+		}).catch( (reson) => {
+			console.error(reson);
+		});
+
+
+		btnStatus.addEventListener("click", () => {
+			flashligth.state().then( (status) => {
+				var msg = status == true ? "Active" : "Inactive"; 
+				context.innerHTML = msg;
+			}).catch( (reson) => {
+				console.error(reson);
+			});
+		});
+
+		btnToogleFlashligth.addEventListener("click", () => {
+			flashligth.toogle().then({
+			}).catch( (reson) => {
+				console.error(reson);
+			});
+		});
+	</script>
+</body>
+</html>

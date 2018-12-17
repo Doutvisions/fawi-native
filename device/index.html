@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Device Info</title>
+</head>
+<body>
+	<div id="deviceInfo">
+	</div>
+	<script src="device.js"></script>
+	<script>
+		var divDomElementInfo = document.getElementById("deviceInfo");
+		var DeviceInfo = new Device().getInfo.then((info) => {
+			console.log(info);
+		    divDomElementInfo.innerHTML = JSON.stringify(info);
+		}).catch( (reson) => {
+			console.error(reson);
+		});
+	</script>
+</body>
+</html>

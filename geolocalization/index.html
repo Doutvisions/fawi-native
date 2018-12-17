@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Geolocalization</title>
+</head>
+<body>
+	<div id="context">
+	</div>
+	<script src="geolocalization.js"></script>
+	<script>
+		var divDomElementInfo = document.getElementById("context");
+		var geolocalization = new Geolocalization();
+		geolocalization.getCoordinates.then((jsonCoordinates) => {
+			console.log('lat: ' + jsonCoordinates.coords.latitude + ', lon: ' + jsonCoordinates.coords.longitude);
+			divDomElementInfo.innerHTML = JSON.stringify(jsonCoordinates);
+		}).catch( (reson) => {
+			console.error(reson);
+		});
+	</script>
+</body>
+</html>

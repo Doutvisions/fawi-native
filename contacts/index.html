@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contacts</title>
+</head>
+<body>
+	<div id="context">
+	</div>
+	<script src="contacts.js"></script>
+	<script>
+		var divDomElementInfo = document.getElementById("context");
+		var contact = new Contacts();
+		contact.getContacts.then((arrayJsonContacts) => {
+		    divDomElementInfo.innerHTML = JSON.stringify(arrayJsonContacts);
+		    console.log(arrayJsonContacts);
+		}).catch((reson) => {
+			console.error(reson);
+		});
+	</script>
+</body>
+</html>
