@@ -1,7 +1,7 @@
 var Device = /** @class */ (function () {
     function Device() {
         var _this = this;
-        this.getInfo = new Promise(function (resolve, reject) {
+        this.info = new Promise(function (resolve, reject) {
             _this.isAvailable();
             setTimeout(function () {
                 var info = _this.get();
