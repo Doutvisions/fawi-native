@@ -2,7 +2,7 @@ var Flashligth = /** @class */ (function () {
     function Flashligth() {
         var _this = this;
         this.response = false;
-        this.isAvailable = new Promise(function (resolve, reject) {
+        this.available = new Promise(function (resolve, reject) {
             _this.getFlashLightAvailable();
             setTimeout(function () {
                 var v_available = _this.getAvailable();
