@@ -19,7 +19,7 @@
 		var context = document.getElementById("context");
 
 		var flashligth = new Flashligth()
-		flashligth.isAvailable.then( (available) => {
+		flashligth.available.then( (available) => {
 			var msg = available == true ? "Available" : "No available"; 
 			contextAvailable.innerHTML = msg;
 		}).catch( (reson) => {
